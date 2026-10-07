@@ -10,7 +10,7 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Clément Leissen — Designer UX/UI freelance">
 <meta property="og:description" content="Designer UX/UI freelance basé à Nantes. Disneyland Paris, SeLoger, Murfy. 5,0 ★ sur Malt — disponible pour mission.">
-<meta property="og:image" content="https://clemleiss.github.io/og-image.jpg?v=2">
+<meta property="og:image" content="https://clemleiss.github.io/og-image.jpg?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -546,7 +546,11 @@
   #reviews .rating-line .stars{color:var(--gold);}
   /* Transfert passe sur fond vert */
   #contact .sign-box .sec-kicker{color:var(--gold-ink);}
-  .final-whistle{border-top:1px solid var(--gold-hair);}
+  .final-whistle{border-top:1px solid var(--gold-hair);padding:22px 20px;
+    background:repeating-linear-gradient(90deg,var(--pitch) 0 110px,var(--pitch2) 110px 220px);}
+  .final-whistle::before{display:none;}
+  /* Transfert : vert uni (comme le Palmarès), la photo de signature respire */
+  #contact.pitch-bg{background:var(--pitch2);}
 
   /* =====================================================================
      Séparateur « chrono de match »
@@ -715,7 +719,7 @@
           <div><b>50+</b><span>Projets</span></div>
           <div><b>5,0</b><span>Note Malt</span></div>
           <div><b>31</b><span>Avis</span></div>
-          <div><b>07</b><span>Ans d'XP</span></div>
+          <div><b>10</b><span>Ans d'XP</span></div>
           <div><b>03</b><span>Ans Disney</span></div>
           <div><b>04</b><span>Ans coach</span></div>
         </div>
@@ -811,7 +815,7 @@
           <text class="axis-label" x="50" y="128" text-anchor="end">Outils</text>
         </svg>
         <div class="radar-tags">
-          <span class="hi">Claude</span><span class="hi">IA générative</span>
+          <span>Claude</span><span>IA générative</span>
           <span>UX Research</span><span>User Testing</span><span>Wireframing</span>
           <span>Figma</span><span>Design System</span><span>Direction artistique</span>
           <span>Adobe</span><span>Notion</span><span>Scrum / Kanban</span>
