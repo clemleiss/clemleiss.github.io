@@ -703,6 +703,20 @@
     box-shadow:0 0 0 1px var(--gold-hair);}
   .tr-arrow{color:var(--pitch);}
   @media (max-width:640px){.trophy-row, .turf-bg .trophy-row{grid-template-columns:44px 1fr 20px;}}
+
+  /* Portrait — bloc « Sélectionneur » : photo terrain + étiquette au-dessus du texte */
+  .coach-card{margin-top:10px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--card-radius);
+    box-shadow:var(--card-shadow);overflow:hidden;}
+  .coach-photo{position:relative;aspect-ratio:2/1;overflow:hidden;background:var(--pitch2);}
+  .coach-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 38%;}
+  .coach-photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(7,43,25,0) 52%,rgba(7,43,25,.78) 100%);}
+  .coach-cap{position:absolute;left:18px;bottom:13px;z-index:1;font-family:var(--body);font-weight:700;font-size:12px;
+    text-transform:uppercase;letter-spacing:.09em;color:#fff;}
+  .coach-body{padding:18px 22px 20px;}
+  .coach-body .tag{display:inline-block;margin-bottom:10px;font-family:var(--body);font-weight:800;font-size:11.5px;text-transform:uppercase;
+    letter-spacing:.06em;background:var(--pitch);color:#fff;padding:6px 10px;border-radius:6px;}
+  .coach-body p{margin:0;font-size:14.5px;line-height:1.62;color:var(--muted);}
 </style>
 </head>
 <body>
@@ -799,9 +813,15 @@
       <div class="about-body reveal">
         <p>Designer UX/UI freelance depuis 2019, j'aide les équipes produit et les marques à transformer une intention en interface claire — de la réflexion stratégique à la production finale, sans perdre le fil du collectif.</p>
         <p>J'accorde une attention particulière au relationnel et à la gestion de projet, autant qu'à la création pure. Après des missions chez eJust, SeLoger, Murfy et deux passages chez Disneyland Paris (~4 ans, dont 6 mois Lead UI), j'ai appris à concevoir à l'échelle, sans jamais lâcher le détail.</p>
-        <div class="coach-note">
+        <div class="coach-card">
+          <div class="coach-photo">
+            <img src="assets/img/coach-ssfc.webp" alt="Clément Leissen, de dos au centre, avec le staff à l'entraînement du Saint-Sébastien FC" width="960" height="600" loading="lazy">
+            <span class="coach-cap">Saint-Sébastien FC · coach depuis 2021</span>
+          </div>
+          <div class="coach-body">
           <span class="tag">Sélectionneur</span>
           <p>Sur le terrain comme dans les projets, je crois au collectif : 15 ans de football à haut niveau régional, aujourd'hui coach au Saint-Sébastien FC. Même exigence, même envie de faire progresser un groupe.</p>
+          </div>
         </div>
       </div>
       <aside class="id-card reveal">
