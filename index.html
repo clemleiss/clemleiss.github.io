@@ -500,7 +500,7 @@
   /* Palmarès — fond vert : la vitrine s'allume sur la pelouse (screen) */
   #projects{background:var(--pitch2);border:0;}
   .scene-trophees{--scene:url(assets/bg/trophees.webp);--scene-pos:center 22%;}
-  .scene-trophees::before{opacity:var(--tro-op,.5);mix-blend-mode:var(--tro-blend,screen);filter:sepia(.25) saturate(1.1) brightness(1.08);
+  .scene-trophees::before{opacity:var(--tro-op,.42);mix-blend-mode:var(--tro-blend,screen);filter:sepia(.55) saturate(1.05) brightness(1.05);
     -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 12%,rgba(0,0,0,.5) 62%,transparent 100%);
             mask-image:linear-gradient(180deg,transparent 0%,#000 12%,rgba(0,0,0,.5) 62%,transparent 100%);}
 
@@ -721,6 +721,16 @@
   /* Blason CL v-finale : proportions 1000 x 1340 */
   .crest{width:34px;height:45px;} .crest.sm{width:26px;height:35px;}
   .fut-side svg, .id-head svg, .modal-head .mh-crest{width:32px;height:43px;}
+
+  /* Transfert v2 : photo sur toute la largeur sous un voile vert dégradé (comme les autres blocs) */
+  .scene-transfert::before{inset:0;width:auto;background-position:62% 30%;opacity:1;filter:saturate(.85);
+    -webkit-mask-image:none;mask-image:none;}
+  .scene-transfert::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:linear-gradient(90deg,var(--pitch2) 0%,rgba(11,61,36,.95) 34%,rgba(11,61,36,.84) 64%,rgba(11,61,36,.76) 100%);}
+  @media (max-width:900px){
+    .scene-transfert::before{background-position:62% top;}
+    .scene-transfert::after{background:linear-gradient(180deg,rgba(11,61,36,.82) 0%,rgba(11,61,36,.92) 40%,var(--pitch2) 85%);}
+  }
 </style>
 </head>
 <body>
