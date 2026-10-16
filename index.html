@@ -491,6 +491,21 @@
   .transfer-links a{font-family:var(--body);font-weight:700;font-size:12.5px;letter-spacing:.02em;color:#fff;padding:10px 16px;border-radius:8px;
     background:rgba(7,43,25,.45);border:1px solid var(--gold-hair);transition:background .15s,color .15s,border-color .15s;}
   .transfer-links a:hover{background:var(--gold);color:var(--pitch2);border-color:var(--gold);}
+  /* Dossier de transfert : les deux PDF à télécharger */
+  .transfer-docs{margin-top:30px;padding-top:24px;border-top:1px solid var(--gold-hair);max-width:520px;}
+  .td-kicker{display:block;font-family:var(--body);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:12px;}
+  .td-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  @media (max-width:560px){.td-list{grid-template-columns:1fr;}}
+  .td-item{display:flex;align-items:center;gap:12px;padding:13px 14px;border-radius:10px;color:#fff;
+    background:rgba(7,43,25,.55);border:1px solid var(--gold-hair);transition:background .15s,border-color .15s,color .15s,transform .15s;}
+  .td-item:hover,.td-item:focus-visible{background:var(--gold);border-color:var(--gold);color:var(--pitch2);transform:translateY(-2px);}
+  .td-ic{width:28px;height:34px;flex-shrink:0;color:var(--gold);transition:color .15s;}
+  .td-txt{flex:1;min-width:0;display:flex;flex-direction:column;}
+  .td-txt b{font-family:var(--body);font-weight:800;font-size:14px;line-height:1.25;}
+  .td-txt small{font-family:var(--body);font-size:12px;line-height:1.35;color:rgba(255,255,255,.72);margin-top:2px;transition:color .15s;}
+  .td-dl{width:18px;height:18px;flex-shrink:0;opacity:.9;}
+  .td-item:hover .td-ic,.td-item:focus-visible .td-ic{color:var(--pitch2);}
+  .td-item:hover .td-txt small,.td-item:focus-visible .td-txt small{color:rgba(11,61,36,.8);}
   @media (max-width:900px){
     #contact.sec-block{padding:80px 0;}
     .scene-transfert::before{inset:0;width:100%;opacity:.38;background-position:62% top;
@@ -804,9 +819,9 @@
 
 <div class="ticker-strip" aria-hidden="true">
   <div class="ticker-track">
-    <span>Designer UX/UI freelance</span><span class="dim">·</span><span>Basé à Nantes</span><span class="dim">·</span><span>Figma</span><span class="dim">·</span><span>Design System</span><span class="dim">·</span><span>UX Research</span><span class="dim">·</span><span>Claude &amp; IA générative</span><span class="dim">·</span><span>50+ projets livrés</span><span class="dim">·</span><span>5,0 ★ sur Malt</span><span class="dim">·</span><span>Disponible pour mission</span><span class="dim">·</span><span>Paris</span><span class="dim">·</span><span>Les Sables d'Olonne</span><span class="dim">·</span><span>Télétravail</span><span class="dim">·</span><span>Ex-Disneyland Paris</span><span class="dim">·</span><span>Coach de foot depuis 2021</span><span class="dim">·</span>
-    <span>Designer UX/UI freelance</span><span class="dim">·</span><span>Basé à Nantes</span><span class="dim">·</span><span>Figma</span><span class="dim">·</span><span>Design System</span><span class="dim">·</span><span>UX Research</span><span class="dim">·</span><span>Claude &amp; IA générative</span><span class="dim">·</span><span>50+ projets livrés</span><span class="dim">·</span><span>5,0 ★ sur Malt</span><span class="dim">·</span><span>Disponible pour mission</span><span class="dim">·</span><span>Paris</span><span class="dim">·</span><span>Les Sables d'Olonne</span><span class="dim">·</span><span>Télétravail</span><span class="dim">·</span><span>Ex-Disneyland Paris</span><span class="dim">·</span><span>Coach de foot depuis 2021</span><span class="dim">·</span>
-    <span>Designer UX/UI freelance</span><span class="dim">·</span><span>Basé à Nantes</span><span class="dim">·</span><span>Figma</span><span class="dim">·</span><span>Design System</span><span class="dim">·</span><span>UX Research</span><span class="dim">·</span><span>Claude &amp; IA générative</span><span class="dim">·</span><span>50+ projets livrés</span><span class="dim">·</span><span>5,0 ★ sur Malt</span><span class="dim">·</span><span>Disponible pour mission</span><span class="dim">·</span><span>Paris</span><span class="dim">·</span><span>Les Sables d'Olonne</span><span class="dim">·</span><span>Télétravail</span><span class="dim">·</span><span>Ex-Disneyland Paris</span><span class="dim">·</span><span>Coach de foot depuis 2021</span><span class="dim">·</span>
+    <span>Designer UX/UI freelance</span><span class="dim">·</span><span>Basé à Nantes</span><span class="dim">·</span><span>Figma</span><span class="dim">·</span><span>Design System</span><span class="dim">·</span><span>UX Research</span><span class="dim">·</span><span>Claude &amp; IA générative</span><span class="dim">·</span><span>50+ projets livrés</span><span class="dim">·</span><span>5,0 ★ sur Malt</span><span class="dim">·</span><span>Disponible pour mission</span><span class="dim">·</span><span>Paris</span><span class="dim">·</span><span>Niort</span><span class="dim">·</span><span>Les Sables d'Olonne</span><span class="dim">·</span><span>Télétravail</span><span class="dim">·</span><span>Ex-Disneyland Paris</span><span class="dim">·</span><span>Coach de foot depuis 2021</span><span class="dim">·</span>
+    <span>Designer UX/UI freelance</span><span class="dim">·</span><span>Basé à Nantes</span><span class="dim">·</span><span>Figma</span><span class="dim">·</span><span>Design System</span><span class="dim">·</span><span>UX Research</span><span class="dim">·</span><span>Claude &amp; IA générative</span><span class="dim">·</span><span>50+ projets livrés</span><span class="dim">·</span><span>5,0 ★ sur Malt</span><span class="dim">·</span><span>Disponible pour mission</span><span class="dim">·</span><span>Paris</span><span class="dim">·</span><span>Niort</span><span class="dim">·</span><span>Les Sables d'Olonne</span><span class="dim">·</span><span>Télétravail</span><span class="dim">·</span><span>Ex-Disneyland Paris</span><span class="dim">·</span><span>Coach de foot depuis 2021</span><span class="dim">·</span>
+    <span>Designer UX/UI freelance</span><span class="dim">·</span><span>Basé à Nantes</span><span class="dim">·</span><span>Figma</span><span class="dim">·</span><span>Design System</span><span class="dim">·</span><span>UX Research</span><span class="dim">·</span><span>Claude &amp; IA générative</span><span class="dim">·</span><span>50+ projets livrés</span><span class="dim">·</span><span>5,0 ★ sur Malt</span><span class="dim">·</span><span>Disponible pour mission</span><span class="dim">·</span><span>Paris</span><span class="dim">·</span><span>Niort</span><span class="dim">·</span><span>Les Sables d'Olonne</span><span class="dim">·</span><span>Télétravail</span><span class="dim">·</span><span>Ex-Disneyland Paris</span><span class="dim">·</span><span>Coach de foot depuis 2021</span><span class="dim">·</span>
   </div>
 </div>
 
@@ -842,7 +857,7 @@
         <dl>
           <div><dt>Club actuel</dt><dd>Freelance</dd></div>
           <div><dt>Ville</dt><dd>Nantes</dd></div>
-          <div><dt>Zone de jeu</dt><dd>+ Paris, Sables d'Olonne, à distance</dd></div>
+          <div><dt>Zone de jeu</dt><dd>+ Paris, Niort, Sables d'Olonne, à distance</dd></div>
           <div><dt>Pied fort</dt><dd>Figma</dd></div>
           <div><dt>Polyvalence</dt><dd>Créa &amp; pilotage de projet</dd></div>
           <div><dt>Style de jeu</dt><dd>Collectif, sens du détail</dd></div>
@@ -1078,6 +1093,13 @@
         <a href="tel:+33677722808">06 77 72 28 08</a>
         <a href="https://www.linkedin.com/in/clementleissen" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="https://www.malt.fr/profile/clementleissen" target="_blank" rel="noopener">Malt ↗</a>
+      </div>
+      <div class="transfer-docs">
+        <span class="td-kicker">Dossier de transfert · PDF</span>
+        <div class="td-list">
+          <a class="td-item" href="assets/pdf/clement-leissen-portfolio-designer-uxui.pdf" download><svg class="td-ic" viewBox="0 0 28 34" aria-hidden="true"><path d="M3 1.5h15.5L26.5 9.5V31a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 31V3A1.5 1.5 0 0 1 3 1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M18.5 1.5V9.5h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><text x="14" y="25" text-anchor="middle" fill="currentColor" style="font:800 7.5px Barlow,sans-serif;letter-spacing:.04em">PDF</text></svg><span class="td-txt"><b>Portfolio complet</b><small>13 pages · 4,5 Mo</small></span><svg class="td-dl" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 16.5h12"/></svg></a>
+          <a class="td-item" href="assets/pdf/portfolio-designer-uxui-anonyme.pdf" download><svg class="td-ic" viewBox="0 0 28 34" aria-hidden="true"><path d="M3 1.5h15.5L26.5 9.5V31a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 31V3A1.5 1.5 0 0 1 3 1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M18.5 1.5V9.5h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><text x="14" y="25" text-anchor="middle" fill="currentColor" style="font:800 7.5px Barlow,sans-serif;letter-spacing:.04em">PDF</text></svg><span class="td-txt"><b>Version anonymisée</b><small>Pour les cabinets · 4,3 Mo</small></span><svg class="td-dl" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 16.5h12"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
