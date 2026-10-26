@@ -748,6 +748,24 @@
     .scene-transfert::before{background-position:62% top;}
     .scene-transfert::after{background:linear-gradient(180deg,rgba(11,61,36,.82) 0%,rgba(11,61,36,.92) 40%,var(--pitch2) 85%);}
   }
+
+  /* Cadres « collector » : filet or et bande verte dessinés à l'intérieur de la carte,
+     sur le même contour arrondi que le fond (plus de décalage dans les angles sur mobile) */
+  .fut-card, .fut-card.player-card{box-shadow:0 34px 70px -26px rgba(7,43,25,.75);}
+  .id-card{box-shadow:0 26px 54px -26px rgba(7,43,25,.6);}
+  .fut-card::after, .id-card::after{content:"";display:block;position:absolute;inset:0;z-index:6;pointer-events:none;border-radius:inherit;
+    box-shadow:inset 0 0 0 1px #F3DF9E, inset 0 0 0 5px var(--pitch2), inset 0 0 0 6.5px rgba(242,183,5,.9);}
+
+  /* Titres de section : interligne serré quand ils passent sur deux lignes */
+  .sec-title{line-height:1;}
+
+  /* Carrière sur mobile : année et club sur une ligne, texte sur toute la largeur en dessous */
+  @media (max-width:700px){
+    .ct-row{grid-template-columns:86px 1fr;gap:4px 14px;align-items:baseline;}
+    .ct-season{justify-self:stretch;text-align:center;padding:2px 0;}
+    .ct-row::before{top:10px;}
+    .ct-desc{grid-column:1 / -1;margin-top:8px;}
+  }
 </style>
 </head>
 <body>
